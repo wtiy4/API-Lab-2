@@ -5,8 +5,7 @@ fetch("https://coffee.alexflipnote.dev/random.json")
         let img = document.createElement("img");
         document.body.appendChild(img);
 
-        // Function to fetch and update the image
-        function updateImage() {
+        function update() {
             fetch("https://coffee.alexflipnote.dev/random.json")
                 .then(response => response.json())
                 .then(data => {
@@ -16,5 +15,5 @@ fetch("https://coffee.alexflipnote.dev/random.json")
 
         img.src = data.file;
 
-        setInterval(updateImage, 2000);
+        setInterval(update, 2000);
     });
