@@ -12,8 +12,8 @@ fetch("https://coffee.alexflipnote.dev/random.json")
                     img.src = data.file;
                 });
         }
-
         img.src = data.file;
+        img.style.width = "200px"
 
         setInterval(update, 2000);
     });
